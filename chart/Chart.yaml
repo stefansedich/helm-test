@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Podinfo wrapper chart
+name: podinfo-wrapper
+version: 0.1.0

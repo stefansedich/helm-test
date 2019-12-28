@@ -1,0 +1,15 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: jupyterhub
+spec:
+  releaseName: podinfo-child
+  chart:
+    repository: https://stefanprodan.github.io/podinfo
+    version: 2.1.0
+    name: podinfo
+  values:
+    some:
+      nested:
+        image:
+          {{- toYaml .Values.podinfo.some.nested.image | nindent 10 }}

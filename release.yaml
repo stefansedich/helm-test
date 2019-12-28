@@ -1,0 +1,17 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: podinfo
+spec:
+  releaseName: podinfo
+  chart:
+    git: https://github.com/stefansedich/helm-test
+    path: chart
+  values:
+    podinfo:
+      some:
+        nested:
+          image:
+            name: some-other-image
+            tag: 1.0.0

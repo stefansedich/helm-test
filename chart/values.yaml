@@ -1,0 +1,6 @@
+podinfo:
+  some:
+    nested:
+      image:
+        name: some-image
+        tag: 1.0.0
